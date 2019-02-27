@@ -1,84 +1,110 @@
-[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:206] initializing epoch 0 (hot restart version=10.200.16384.127.options=capacity=16384, num_slots=8209 hash=228984379728933363 size=2654312)
-[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:208] statically linked extensions:
-[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:210]   access_loggers: envoy.file_access_log,envoy.http_grpc_access_log
-[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:213]   filters.http: envoy.buffer,envoy.cors,envoy.ext_authz,envoy.fault,envoy.filters.http.header_to_metadata,envoy.filters.http.jwt_authn,envoy.filters.http.rbac,envoy.grpc_http1_bridge,envoy.grpc_json_transcoder,envoy.grpc_web,envoy.gzip,envoy.health_check,envoy.http_dynamo_filter,envoy.ip_tagging,envoy.lua,envoy.rate_limit,envoy.router,envoy.squash
-[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:216]   filters.listener: envoy.listener.original_dst,envoy.listener.proxy_protocol,envoy.listener.tls_inspector
-[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:219]   filters.network: envoy.client_ssl_auth,envoy.echo,envoy.ext_authz,envoy.filters.network.dubbo_proxy,envoy.filters.network.rbac,envoy.filters.network.sni_cluster,envoy.filters.network.thrift_proxy,envoy.http_connection_manager,envoy.mongo_proxy,envoy.ratelimit,envoy.redis_proxy,envoy.tcp_proxy
-[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:221]   stat_sinks: envoy.dog_statsd,envoy.metrics_service,envoy.stat_sinks.hystrix,envoy.statsd
-[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:223]   tracers: envoy.dynamic.ot,envoy.lightstep,envoy.tracers.datadog,envoy.zipkin
-[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:226]   transport_sockets.downstream: envoy.transport_sockets.alts,envoy.transport_sockets.capture,raw_buffer,tls
-[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:229]   transport_sockets.upstream: envoy.transport_sockets.alts,envoy.transport_sockets.capture,raw_buffer,tls
-[2019-02-27 14:06:47.461][073074][info][main] [source/server/server.cc:271] admin address: 0.0.0.0:9901
-[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
-[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
-[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
-[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
-[2019-02-27 14:06:47.461][073074][info][config] [source/server/configuration_impl.cc:51] loading 0 static secret(s)
-[2019-02-27 14:06:47.461][073074][info][config] [source/server/configuration_impl.cc:57] loading 2 cluster(s)
-[2019-02-27 14:06:47.465][073078][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/upstream_impl.cc:583] initializing secondary cluster accesslog_cluster completed
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:91] cm init: init complete: cluster=accesslog_cluster primary=0 secondary=0
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:63] cm init: adding: cluster=accesslog_cluster primary=0 secondary=0
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/upstream_impl.cc:583] initializing secondary cluster some_service completed
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:91] cm init: init complete: cluster=some_service primary=0 secondary=0
-[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:63] cm init: adding: cluster=some_service primary=0 secondary=0
-[2019-02-27 14:06:47.466][073074][info][upstream] [source/common/upstream/cluster_manager_impl.cc:136] cm init: all clusters initialized
-[2019-02-27 14:06:47.466][073074][info][config] [source/server/configuration_impl.cc:62] loading 1 listener(s)
-[2019-02-27 14:06:47.466][073074][debug][config] [source/server/configuration_impl.cc:64] listener #0:
-[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:640] begin add/update listener: name=listener_0 hash=6043571183013514745
-[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:40]   filter #0:
-[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:41]     name: envoy.http_connection_manager
-[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:44]   config: {"codec_type":"AUTO","route_config":{"virtual_hosts":[{"domains":["*"],"routes":[{"route":{"cluster":"some_service"},"match":{"prefix":"/"}}],"name":"local_service"}],"name":"local_route"},"stat_prefix":"ingress_http","generate_request_id":true,"access_log":[{"config":{"common_config":{"grpc_service":{"envoy_grpc":{"cluster_name":"accesslog_cluster"}},"log_name":"accesslog"}},"name":"envoy.http_grpc_access_log"}],"tracing":{"operation_name":"ingress"},"http_filters":[{"name":"envoy.router"}]}
-[2019-02-27 14:06:47.468][073074][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:298]     http filter #0
-[2019-02-27 14:06:47.468][073074][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:299]       name: envoy.router
-[2019-02-27 14:06:47.468][073074][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:303]     config: {}
-[2019-02-27 14:06:47.468][073074][debug][config] [source/server/listener_manager_impl.cc:527] add active listener: name=listener_0, hash=6043571183013514745, address=0.0.0.0:10000
-[2019-02-27 14:06:47.468][073074][info][config] [source/server/configuration_impl.cc:95] loading tracing configuration
-[2019-02-27 14:06:47.468][073074][info][config] [source/server/configuration_impl.cc:115] loading stats sink configuration
-[2019-02-27 14:06:47.469][073074][info][main] [source/server/server.cc:429] all clusters initialized. initializing init manager
-[2019-02-27 14:06:47.469][073074][info][config] [source/server/listener_manager_impl.cc:910] all dependencies initialized. starting workers
-[2019-02-27 14:06:47.469][073080][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
-[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
-[2019-02-27 14:06:47.470][073081][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
-[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
-[2019-02-27 14:06:47.470][073082][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
-[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
-[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
-[2019-02-27 14:06:47.470][073083][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
-[2019-02-27 14:06:47.471][073074][info][main] [source/server/server.cc:457] starting main dispatch loop
-[2019-02-27 14:06:47.471][073084][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
-[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
-[2019-02-27 14:06:47.471][073085][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
-[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
-[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
-[2019-02-27 14:06:47.471][073086][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
-[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
-[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
-[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
-[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
-[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
-[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
-[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
-[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
-[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
-[2019-02-27 14:06:47.472][073087][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
-[2019-02-27 14:06:52.470][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:06:56.590][073084][debug][main] [source/server/connection_handler_impl.cc:236] [C0] new connection
-[2019-02-27 14:06:56.591][073084][debug][http] [source/common/http/conn_manager_impl.cc:200] [C0] new stream
-[2019-02-27 14:06:56.592][073084][debug][http] [source/common/http/conn_manager_impl.cc:529] [C0][S2394037851775756397] request headers complete (end_stream=true):
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:206] initializing epoch 0 (hot restart version=10.200.16384.127.options=capacity=16384, num_slots=8209 hash=228984379728933363 size=2654312)
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:208] statically linked extensions:
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:210]   access_loggers: envoy.file_access_log,envoy.http_grpc_access_log
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:213]   filters.http: envoy.buffer,envoy.cors,envoy.ext_authz,envoy.fault,envoy.filters.http.header_to_metadata,envoy.filters.http.jwt_authn,envoy.filters.http.rbac,envoy.grpc_http1_bridge,envoy.grpc_json_transcoder,envoy.grpc_web,envoy.gzip,envoy.health_check,envoy.http_dynamo_filter,envoy.ip_tagging,envoy.lua,envoy.rate_limit,envoy.router,envoy.squash
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:216]   filters.listener: envoy.listener.original_dst,envoy.listener.proxy_protocol,envoy.listener.tls_inspector
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:219]   filters.network: envoy.client_ssl_auth,envoy.echo,envoy.ext_authz,envoy.filters.network.dubbo_proxy,envoy.filters.network.rbac,envoy.filters.network.sni_cluster,envoy.filters.network.thrift_proxy,envoy.http_connection_manager,envoy.mongo_proxy,envoy.ratelimit,envoy.redis_proxy,envoy.tcp_proxy
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:221]   stat_sinks: envoy.dog_statsd,envoy.metrics_service,envoy.stat_sinks.hystrix,envoy.statsd
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:223]   tracers: envoy.dynamic.ot,envoy.lightstep,envoy.tracers.datadog,envoy.zipkin
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:226]   transport_sockets.downstream: envoy.transport_sockets.alts,envoy.transport_sockets.capture,raw_buffer,tls
+[2019-02-27 14:19:38.675][073961][info][main] [source/server/server.cc:229]   transport_sockets.upstream: envoy.transport_sockets.alts,envoy.transport_sockets.capture,raw_buffer,tls
+[2019-02-27 14:19:38.679][073961][info][main] [source/server/server.cc:271] admin address: 0.0.0.0:9901
+[2019-02-27 14:19:38.679][073961][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:19:38.679][073961][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:19:38.679][073961][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:19:38.679][073961][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:19:38.679][073961][info][config] [source/server/configuration_impl.cc:51] loading 0 static secret(s)
+[2019-02-27 14:19:38.679][073961][info][config] [source/server/configuration_impl.cc:57] loading 2 cluster(s)
+[2019-02-27 14:19:38.680][073965][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster rate_limit_service
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1206] DNS hosts have changed for 127.0.0.1
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:583] initializing secondary cluster rate_limit_service completed
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster rate_limit_service
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:91] cm init: init complete: cluster=rate_limit_service primary=0 secondary=0
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:63] cm init: adding: cluster=rate_limit_service primary=0 secondary=0
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:583] initializing secondary cluster some_service completed
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:91] cm init: init complete: cluster=some_service primary=0 secondary=0
+[2019-02-27 14:19:38.681][073961][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:63] cm init: adding: cluster=some_service primary=0 secondary=0
+[2019-02-27 14:19:38.681][073961][info][upstream] [source/common/upstream/cluster_manager_impl.cc:136] cm init: all clusters initialized
+[2019-02-27 14:19:38.681][073961][info][config] [source/server/configuration_impl.cc:62] loading 1 listener(s)
+[2019-02-27 14:19:38.681][073961][debug][config] [source/server/configuration_impl.cc:64] listener #0:
+[2019-02-27 14:19:38.681][073961][debug][config] [source/server/listener_manager_impl.cc:640] begin add/update listener: name=listener_0 hash=9869164891669450950
+[2019-02-27 14:19:38.681][073961][debug][config] [source/server/listener_manager_impl.cc:40]   filter #0:
+[2019-02-27 14:19:38.681][073961][debug][config] [source/server/listener_manager_impl.cc:41]     name: envoy.http_connection_manager
+[2019-02-27 14:19:38.681][073961][debug][config] [source/server/listener_manager_impl.cc:44]   config: {"http_filters":[{"config":{"domain":"envoy"},"name":"envoy.rate_limit"},{"name":"envoy.router"}],"route_config":{"virtual_hosts":[{"name":"local_service","routes":[{"match":{"prefix":"/"},"route":{"cluster":"some_service"}}],"domains":["*"],"rate_limits":[{"actions":[{"header_value_match":{"descriptor_value":"rate","headers":[{"name":":path","exact_match":"/rate"}]}}]}]}],"name":"local_route"},"stat_prefix":"ingress_http","codec_type":"AUTO"}
+[2019-02-27 14:19:38.683][073961][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:298]     http filter #0
+[2019-02-27 14:19:38.683][073961][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:299]       name: envoy.rate_limit
+[2019-02-27 14:19:38.683][073961][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:303]     config: {"domain":"envoy"}
+[2019-02-27 14:19:38.683][073961][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:298]     http filter #1
+[2019-02-27 14:19:38.683][073961][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:299]       name: envoy.router
+[2019-02-27 14:19:38.683][073961][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:303]     config: {}
+[2019-02-27 14:19:38.683][073961][debug][config] [source/server/listener_manager_impl.cc:527] add active listener: name=listener_0, hash=9869164891669450950, address=0.0.0.0:10000
+[2019-02-27 14:19:38.683][073961][info][config] [source/server/configuration_impl.cc:95] loading tracing configuration
+[2019-02-27 14:19:38.683][073961][info][config] [source/server/configuration_impl.cc:115] loading stats sink configuration
+[2019-02-27 14:19:38.683][073961][info][main] [source/server/server.cc:429] all clusters initialized. initializing init manager
+[2019-02-27 14:19:38.683][073961][info][config] [source/server/listener_manager_impl.cc:910] all dependencies initialized. starting workers
+[2019-02-27 14:19:38.683][073967][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:19:38.684][073967][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster rate_limit_service
+[2019-02-27 14:19:38.684][073967][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:19:38.684][073967][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster rate_limit_service
+[2019-02-27 14:19:38.684][073961][info][main] [source/server/server.cc:457] starting main dispatch loop
+[2019-02-27 14:19:38.684][073970][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:19:38.684][073967][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:19:38.684][073968][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:19:38.684][073971][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:19:38.684][073968][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster rate_limit_service
+[2019-02-27 14:19:38.684][073968][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:19:38.684][073972][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:19:38.684][073968][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster rate_limit_service
+[2019-02-27 14:19:38.684][073968][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:19:38.684][073971][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster rate_limit_service
+[2019-02-27 14:19:38.684][073973][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:19:38.684][073971][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:19:38.684][073971][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster rate_limit_service
+[2019-02-27 14:19:38.684][073971][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:19:38.684][073969][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:19:38.685][073969][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster rate_limit_service
+[2019-02-27 14:19:38.685][073974][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:19:38.685][073969][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:19:38.685][073969][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster rate_limit_service
+[2019-02-27 14:19:38.685][073969][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:19:43.682][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:19:43.682][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:19:43.685][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:19:48.683][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:19:48.683][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:19:48.689][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:19:53.684][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:19:53.684][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:19:53.692][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:19:58.684][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:19:58.684][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:19:58.697][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:03.685][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:03.685][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:03.698][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:08.687][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:08.687][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:08.700][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:13.689][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:13.689][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:13.706][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:16.703][073969][debug][main] [source/server/connection_handler_impl.cc:236] [C0] new connection
+[2019-02-27 14:20:16.703][073969][debug][http] [source/common/http/conn_manager_impl.cc:200] [C0] new stream
+[2019-02-27 14:20:16.705][073969][debug][http] [source/common/http/conn_manager_impl.cc:529] [C0][S2445732336778992686] request headers complete (end_stream=true):
 ':authority', '127.0.0.1:10000'
 ':path', '/'
 ':method', 'GET'
 'user-agent', 'curl/7.29.0'
 'accept', '*/*'
 
-[2019-02-27 14:06:56.592][073084][debug][http] [source/common/http/conn_manager_impl.cc:928] [C0][S2394037851775756397] request end stream
-[2019-02-27 14:06:56.592][073084][debug][router] [source/common/router/router.cc:264] [C0][S2394037851775756397] cluster 'some_service' match for URL '/'
-[2019-02-27 14:06:56.592][073084][debug][router] [source/common/router/router.cc:322] [C0][S2394037851775756397] router decoding headers:
+[2019-02-27 14:20:16.705][073969][debug][http] [source/common/http/conn_manager_impl.cc:928] [C0][S2445732336778992686] request end stream
+[2019-02-27 14:20:16.705][073969][debug][router] [source/common/router/router.cc:264] [C0][S2445732336778992686] cluster 'some_service' match for URL '/'
+[2019-02-27 14:20:16.705][073969][debug][router] [source/common/router/router.cc:322] [C0][S2445732336778992686] router decoding headers:
 ':authority', '127.0.0.1:10000'
 ':path', '/'
 ':method', 'GET'
@@ -86,77 +112,452 @@
 'user-agent', 'curl/7.29.0'
 'accept', '*/*'
 'x-forwarded-proto', 'http'
-'x-request-id', 'd2532bfd-3bdc-9ad5-8563-8dead3014310'
+'x-request-id', '37271a0e-1bcf-428f-b3d3-1b717dd6d71b'
 'x-envoy-expected-rq-timeout-ms', '15000'
 
-[2019-02-27 14:06:56.592][073084][debug][pool] [source/common/http/http1/conn_pool.cc:80] creating a new connection
-[2019-02-27 14:06:56.592][073084][debug][client] [source/common/http/codec_client.cc:26] [C1] connecting
-[2019-02-27 14:06:56.592][073084][debug][connection] [source/common/network/connection_impl.cc:634] [C1] connecting to 127.0.0.1:5001
-[2019-02-27 14:06:56.592][073084][debug][connection] [source/common/network/connection_impl.cc:643] [C1] connection in progress
-[2019-02-27 14:06:56.592][073084][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
-[2019-02-27 14:06:56.592][073084][debug][connection] [source/common/network/connection_impl.cc:516] [C1] connected
-[2019-02-27 14:06:56.592][073084][debug][client] [source/common/http/codec_client.cc:64] [C1] connected
-[2019-02-27 14:06:56.592][073084][debug][pool] [source/common/http/http1/conn_pool.cc:234] [C1] attaching to next request
-[2019-02-27 14:06:56.592][073084][debug][router] [source/common/router/router.cc:1007] [C0][S2394037851775756397] pool ready
-[2019-02-27 14:06:56.593][073084][debug][router] [source/common/router/router.cc:609] [C0][S2394037851775756397] upstream headers complete: end_stream=false
-[2019-02-27 14:06:56.593][073084][debug][http] [source/common/http/conn_manager_impl.cc:1150] [C0][S2394037851775756397] encoding headers via codec (end_stream=false):
+[2019-02-27 14:20:16.705][073969][debug][pool] [source/common/http/http1/conn_pool.cc:80] creating a new connection
+[2019-02-27 14:20:16.705][073969][debug][client] [source/common/http/codec_client.cc:26] [C1] connecting
+[2019-02-27 14:20:16.705][073969][debug][connection] [source/common/network/connection_impl.cc:634] [C1] connecting to 127.0.0.1:5000
+[2019-02-27 14:20:16.705][073969][debug][connection] [source/common/network/connection_impl.cc:643] [C1] connection in progress
+[2019-02-27 14:20:16.705][073969][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:20:16.705][073969][debug][connection] [source/common/network/connection_impl.cc:525] [C1] delayed connection error: 111
+[2019-02-27 14:20:16.705][073969][debug][connection] [source/common/network/connection_impl.cc:183] [C1] closing socket: 0
+[2019-02-27 14:20:16.705][073969][debug][client] [source/common/http/codec_client.cc:82] [C1] disconnect. resetting 0 pending requests
+[2019-02-27 14:20:16.705][073969][debug][pool] [source/common/http/http1/conn_pool.cc:121] [C1] client disconnected
+[2019-02-27 14:20:16.705][073969][debug][router] [source/common/router/router.cc:475] [C0][S2445732336778992686] upstream reset
+[2019-02-27 14:20:16.705][073969][debug][http] [source/common/http/conn_manager_impl.cc:1150] [C0][S2445732336778992686] encoding headers via codec (end_stream=false):
+':status', '503'
+'content-length', '57'
+'content-type', 'text/plain'
+'date', 'Wed, 27 Feb 2019 06:20:16 GMT'
+'server', 'envoy'
+
+[2019-02-27 14:20:16.706][073969][debug][connection] [source/common/network/connection_impl.cc:501] [C0] remote close
+[2019-02-27 14:20:16.706][073969][debug][connection] [source/common/network/connection_impl.cc:183] [C0] closing socket: 0
+[2019-02-27 14:20:16.706][073969][debug][main] [source/server/connection_handler_impl.cc:68] [C0] adding to cleanup list
+[2019-02-27 14:20:18.690][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:18.690][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:18.709][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:23.692][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:23.692][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:23.711][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:28.693][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:28.693][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:28.712][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:33.693][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:33.693][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:33.712][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:38.694][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:38.694][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:38.713][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:43.695][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:43.695][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:43.714][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:48.696][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:48.696][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:48.715][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:53.698][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:53.698][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:53.718][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:20:58.700][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:20:58.700][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:20:58.719][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:03.701][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:03.701][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:03.720][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:08.702][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:08.702][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:08.721][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:13.707][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:13.707][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:13.724][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:18.708][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:18.708][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:18.726][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:23.709][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:23.709][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:23.728][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:28.711][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:28.711][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:28.733][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:31.732][073971][debug][main] [source/server/connection_handler_impl.cc:236] [C2] new connection
+[2019-02-27 14:21:31.732][073971][debug][http] [source/common/http/conn_manager_impl.cc:200] [C2] new stream
+[2019-02-27 14:21:31.732][073971][debug][http] [source/common/http/conn_manager_impl.cc:529] [C2][S4586610231825886075] request headers complete (end_stream=true):
+':authority', '127.0.0.1:10000'
+':path', '/'
+':method', 'GET'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+
+[2019-02-27 14:21:31.732][073971][debug][http] [source/common/http/conn_manager_impl.cc:928] [C2][S4586610231825886075] request end stream
+[2019-02-27 14:21:31.732][073971][debug][router] [source/common/router/router.cc:264] [C2][S4586610231825886075] cluster 'some_service' match for URL '/'
+[2019-02-27 14:21:31.732][073971][debug][router] [source/common/router/router.cc:322] [C2][S4586610231825886075] router decoding headers:
+':authority', '127.0.0.1:10000'
+':path', '/'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '2197aea8-5056-4452-8c84-7f9c28904b22'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+[2019-02-27 14:21:31.732][073971][debug][pool] [source/common/http/http1/conn_pool.cc:80] creating a new connection
+[2019-02-27 14:21:31.732][073971][debug][client] [source/common/http/codec_client.cc:26] [C3] connecting
+[2019-02-27 14:21:31.732][073971][debug][connection] [source/common/network/connection_impl.cc:634] [C3] connecting to 127.0.0.1:5000
+[2019-02-27 14:21:31.732][073971][debug][connection] [source/common/network/connection_impl.cc:643] [C3] connection in progress
+[2019-02-27 14:21:31.732][073971][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:21:31.732][073971][debug][connection] [source/common/network/connection_impl.cc:516] [C3] connected
+[2019-02-27 14:21:31.732][073971][debug][client] [source/common/http/codec_client.cc:64] [C3] connected
+[2019-02-27 14:21:31.732][073971][debug][pool] [source/common/http/http1/conn_pool.cc:234] [C3] attaching to next request
+[2019-02-27 14:21:31.732][073971][debug][router] [source/common/router/router.cc:1007] [C2][S4586610231825886075] pool ready
+[2019-02-27 14:21:31.733][073971][debug][router] [source/common/router/router.cc:609] [C2][S4586610231825886075] upstream headers complete: end_stream=false
+[2019-02-27 14:21:31.733][073971][debug][http] [source/common/http/conn_manager_impl.cc:1150] [C2][S4586610231825886075] encoding headers via codec (end_stream=false):
 ':status', '200'
 'server', 'envoy'
-'date', 'Wed, 27 Feb 2019 06:06:56 GMT'
+'date', 'Wed, 27 Feb 2019 06:21:31 GMT'
 'content-type', 'text/html; charset=ANSI_X3.4-1968'
-'content-length', '470'
+'content-length', '374'
+'x-envoy-upstream-service-time', '1'
+
+[2019-02-27 14:21:31.733][073971][debug][client] [source/common/http/codec_client.cc:95] [C3] response complete
+[2019-02-27 14:21:31.733][073971][debug][pool] [source/common/http/http1/conn_pool.cc:191] [C3] response complete
+[2019-02-27 14:21:31.733][073971][debug][pool] [source/common/http/http1/conn_pool.cc:229] [C3] moving to ready
+[2019-02-27 14:21:31.733][073971][debug][connection] [source/common/network/connection_impl.cc:501] [C3] remote close
+[2019-02-27 14:21:31.733][073971][debug][connection] [source/common/network/connection_impl.cc:183] [C3] closing socket: 0
+[2019-02-27 14:21:31.733][073971][debug][client] [source/common/http/codec_client.cc:82] [C3] disconnect. resetting 0 pending requests
+[2019-02-27 14:21:31.733][073971][debug][pool] [source/common/http/http1/conn_pool.cc:121] [C3] client disconnected
+[2019-02-27 14:21:31.735][073971][debug][connection] [source/common/network/connection_impl.cc:501] [C2] remote close
+[2019-02-27 14:21:31.735][073971][debug][connection] [source/common/network/connection_impl.cc:183] [C2] closing socket: 0
+[2019-02-27 14:21:31.735][073971][debug][main] [source/server/connection_handler_impl.cc:68] [C2] adding to cleanup list
+[2019-02-27 14:21:33.711][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:33.711][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:33.735][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:37.405][073968][debug][main] [source/server/connection_handler_impl.cc:236] [C4] new connection
+[2019-02-27 14:21:37.405][073968][debug][http] [source/common/http/conn_manager_impl.cc:200] [C4] new stream
+[2019-02-27 14:21:37.405][073968][debug][http] [source/common/http/conn_manager_impl.cc:529] [C4][S15263945276279971052] request headers complete (end_stream=true):
+':authority', '127.0.0.1:10000'
+':path', '/'
+':method', 'GET'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+
+[2019-02-27 14:21:37.405][073968][debug][http] [source/common/http/conn_manager_impl.cc:928] [C4][S15263945276279971052] request end stream
+[2019-02-27 14:21:37.405][073968][debug][router] [source/common/router/router.cc:264] [C4][S15263945276279971052] cluster 'some_service' match for URL '/'
+[2019-02-27 14:21:37.406][073968][debug][router] [source/common/router/router.cc:322] [C4][S15263945276279971052] router decoding headers:
+':authority', '127.0.0.1:10000'
+':path', '/'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'd7a22df2-bfd6-40b9-beaa-7ab75fb1f8d6'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+[2019-02-27 14:21:37.406][073968][debug][pool] [source/common/http/http1/conn_pool.cc:80] creating a new connection
+[2019-02-27 14:21:37.406][073968][debug][client] [source/common/http/codec_client.cc:26] [C5] connecting
+[2019-02-27 14:21:37.406][073968][debug][connection] [source/common/network/connection_impl.cc:634] [C5] connecting to 127.0.0.1:5000
+[2019-02-27 14:21:37.406][073968][debug][connection] [source/common/network/connection_impl.cc:643] [C5] connection in progress
+[2019-02-27 14:21:37.406][073968][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:21:37.406][073968][debug][connection] [source/common/network/connection_impl.cc:516] [C5] connected
+[2019-02-27 14:21:37.406][073968][debug][client] [source/common/http/codec_client.cc:64] [C5] connected
+[2019-02-27 14:21:37.406][073968][debug][pool] [source/common/http/http1/conn_pool.cc:234] [C5] attaching to next request
+[2019-02-27 14:21:37.406][073968][debug][router] [source/common/router/router.cc:1007] [C4][S15263945276279971052] pool ready
+[2019-02-27 14:21:37.407][073968][debug][router] [source/common/router/router.cc:609] [C4][S15263945276279971052] upstream headers complete: end_stream=false
+[2019-02-27 14:21:37.407][073968][debug][http] [source/common/http/conn_manager_impl.cc:1150] [C4][S15263945276279971052] encoding headers via codec (end_stream=false):
+':status', '200'
+'server', 'envoy'
+'date', 'Wed, 27 Feb 2019 06:21:37 GMT'
+'content-type', 'text/html; charset=ANSI_X3.4-1968'
+'content-length', '374'
 'x-envoy-upstream-service-time', '0'
 
-[2019-02-27 14:06:56.593][073084][debug][client] [source/common/http/codec_client.cc:95] [C1] response complete
-[2019-02-27 14:06:56.593][073084][debug][pool] [source/common/http/http1/conn_pool.cc:191] [C1] response complete
-[2019-02-27 14:06:56.593][073084][debug][pool] [source/common/http/http1/conn_pool.cc:229] [C1] moving to ready
-[2019-02-27 14:06:56.593][073084][debug][connection] [source/common/network/connection_impl.cc:501] [C1] remote close
-[2019-02-27 14:06:56.593][073084][debug][connection] [source/common/network/connection_impl.cc:183] [C1] closing socket: 0
-[2019-02-27 14:06:56.593][073084][debug][client] [source/common/http/codec_client.cc:82] [C1] disconnect. resetting 0 pending requests
-[2019-02-27 14:06:56.593][073084][debug][pool] [source/common/http/http1/conn_pool.cc:121] [C1] client disconnected
-[2019-02-27 14:06:56.594][073084][debug][router] [source/common/router/router.cc:264] [C0][S8570762764156844560] cluster 'accesslog_cluster' match for URL '/envoy.service.accesslog.v2.AccessLogService/StreamAccessLogs'
-[2019-02-27 14:06:56.594][073084][debug][router] [source/common/router/router.cc:322] [C0][S8570762764156844560] router decoding headers:
+[2019-02-27 14:21:37.407][073968][debug][client] [source/common/http/codec_client.cc:95] [C5] response complete
+[2019-02-27 14:21:37.407][073968][debug][pool] [source/common/http/http1/conn_pool.cc:191] [C5] response complete
+[2019-02-27 14:21:37.407][073968][debug][pool] [source/common/http/http1/conn_pool.cc:229] [C5] moving to ready
+[2019-02-27 14:21:37.407][073968][debug][connection] [source/common/network/connection_impl.cc:501] [C5] remote close
+[2019-02-27 14:21:37.407][073968][debug][connection] [source/common/network/connection_impl.cc:183] [C5] closing socket: 0
+[2019-02-27 14:21:37.407][073968][debug][client] [source/common/http/codec_client.cc:82] [C5] disconnect. resetting 0 pending requests
+[2019-02-27 14:21:37.407][073968][debug][pool] [source/common/http/http1/conn_pool.cc:121] [C5] client disconnected
+[2019-02-27 14:21:37.408][073968][debug][connection] [source/common/network/connection_impl.cc:501] [C4] remote close
+[2019-02-27 14:21:37.408][073968][debug][connection] [source/common/network/connection_impl.cc:183] [C4] closing socket: 0
+[2019-02-27 14:21:37.408][073968][debug][main] [source/server/connection_handler_impl.cc:68] [C4] adding to cleanup list
+[2019-02-27 14:21:38.714][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:38.714][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:38.738][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:41.787][073971][debug][main] [source/server/connection_handler_impl.cc:236] [C6] new connection
+[2019-02-27 14:21:41.787][073971][debug][http] [source/common/http/conn_manager_impl.cc:200] [C6] new stream
+[2019-02-27 14:21:41.787][073971][debug][http] [source/common/http/conn_manager_impl.cc:529] [C6][S9624958544708771856] request headers complete (end_stream=true):
+':authority', '127.0.0.1:10000'
+':path', '/rate'
+':method', 'GET'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+
+[2019-02-27 14:21:41.787][073971][debug][http] [source/common/http/conn_manager_impl.cc:928] [C6][S9624958544708771856] request end stream
+[2019-02-27 14:21:41.787][073971][debug][router] [source/common/router/router.cc:264] [C0][S1085471378838744588] cluster 'rate_limit_service' match for URL '/envoy.service.ratelimit.v2.RateLimitService/ShouldRateLimit'
+[2019-02-27 14:21:41.787][073971][debug][router] [source/common/router/router.cc:322] [C0][S1085471378838744588] router decoding headers:
 ':method', 'POST'
-':path', '/envoy.service.accesslog.v2.AccessLogService/StreamAccessLogs'
-':authority', 'accesslog_cluster'
+':path', '/envoy.service.ratelimit.v2.RateLimitService/ShouldRateLimit'
+':authority', 'rate_limit_service'
 ':scheme', 'http'
 'te', 'trailers'
+'grpc-timeout', '20m'
 'content-type', 'application/grpc'
 'x-envoy-internal', 'true'
 'x-forwarded-for', '192.168.0.4'
+'x-envoy-expected-rq-timeout-ms', '20'
 
-[2019-02-27 14:06:56.594][073084][debug][client] [source/common/http/codec_client.cc:26] [C2] connecting
-[2019-02-27 14:06:56.594][073084][debug][connection] [source/common/network/connection_impl.cc:634] [C2] connecting to 127.0.0.1:18090
-[2019-02-27 14:06:56.594][073084][debug][connection] [source/common/network/connection_impl.cc:643] [C2] connection in progress
-[2019-02-27 14:06:56.594][073084][debug][http2] [source/common/http/http2/codec_impl.cc:732] [C2] setting stream-level initial window size to 268435456
-[2019-02-27 14:06:56.594][073084][debug][http2] [source/common/http/http2/codec_impl.cc:754] [C2] updating connection-level initial window size to 268435456
-[2019-02-27 14:06:56.594][073084][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
-[2019-02-27 14:06:56.594][073084][debug][connection] [source/common/network/connection_impl.cc:516] [C2] connected
-[2019-02-27 14:06:56.594][073084][debug][client] [source/common/http/codec_client.cc:64] [C2] connected
-[2019-02-27 14:06:56.594][073084][debug][pool] [source/common/http/http2/conn_pool.cc:83] [C2] creating stream
-[2019-02-27 14:06:56.594][073084][debug][router] [source/common/router/router.cc:1007] [C0][S8570762764156844560] pool ready
-[2019-02-27 14:06:56.595][073084][debug][connection] [source/common/network/connection_impl.cc:501] [C0] remote close
-[2019-02-27 14:06:56.595][073084][debug][connection] [source/common/network/connection_impl.cc:183] [C0] closing socket: 0
-[2019-02-27 14:06:56.595][073084][debug][main] [source/server/connection_handler_impl.cc:68] [C0] adding to cleanup list
-[2019-02-27 14:06:57.474][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:02.475][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:07.476][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:12.478][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:17.479][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:22.480][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:27.480][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:32.481][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:37.482][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:42.483][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:47.485][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:52.487][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:07:57.488][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:02.489][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:07.490][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:12.491][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:17.493][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:22.494][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:27.496][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:32.496][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:37.497][073074][debug][main] [source/server/server.cc:143] flushing stats
-[2019-02-27 14:08:42.499][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:41.787][073971][debug][client] [source/common/http/codec_client.cc:26] [C7] connecting
+[2019-02-27 14:21:41.787][073971][debug][connection] [source/common/network/connection_impl.cc:634] [C7] connecting to 127.0.0.1:8081
+[2019-02-27 14:21:41.787][073971][debug][connection] [source/common/network/connection_impl.cc:643] [C7] connection in progress
+[2019-02-27 14:21:41.787][073971][debug][http2] [source/common/http/http2/codec_impl.cc:732] [C7] setting stream-level initial window size to 268435456
+[2019-02-27 14:21:41.787][073971][debug][http2] [source/common/http/http2/codec_impl.cc:754] [C7] updating connection-level initial window size to 268435456
+[2019-02-27 14:21:41.787][073971][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:21:41.787][073971][debug][connection] [source/common/network/connection_impl.cc:516] [C7] connected
+[2019-02-27 14:21:41.787][073971][debug][client] [source/common/http/codec_client.cc:64] [C7] connected
+[2019-02-27 14:21:41.787][073971][debug][pool] [source/common/http/http2/conn_pool.cc:83] [C7] creating stream
+[2019-02-27 14:21:41.787][073971][debug][router] [source/common/router/router.cc:1007] [C0][S1085471378838744588] pool ready
+[2019-02-27 14:21:41.788][073971][debug][router] [source/common/router/router.cc:609] [C0][S1085471378838744588] upstream headers complete: end_stream=false
+[2019-02-27 14:21:41.788][073971][debug][http] [source/common/http/async_client_impl.cc:92] async http request response headers (end_stream=false):
+':status', '200'
+'content-type', 'application/grpc'
+'x-envoy-upstream-service-time', '0'
+
+[2019-02-27 14:21:41.788][073971][debug][client] [source/common/http/codec_client.cc:95] [C7] response complete
+[2019-02-27 14:21:41.788][073971][debug][pool] [source/common/http/http2/conn_pool.cc:222] [C7] destroying stream: 0 remaining
+[2019-02-27 14:21:41.788][073971][debug][http] [source/common/http/async_client_impl.cc:107] async http request response trailers:
+'grpc-status', '0'
+'grpc-message', ''
+
+[2019-02-27 14:21:41.788][073971][debug][http] [source/common/http/conn_manager_impl.cc:1150] [C6][S9624958544708771856] encoding headers via codec (end_stream=true):
+':status', '429'
+'x-envoy-ratelimited', 'true'
+'date', 'Wed, 27 Feb 2019 06:21:41 GMT'
+'server', 'envoy'
+
+[2019-02-27 14:21:41.788][073971][debug][http2] [source/common/http/http2/codec_impl.cc:564] [C7] stream closed: 0
+[2019-02-27 14:21:41.789][073971][debug][connection] [source/common/network/connection_impl.cc:501] [C6] remote close
+[2019-02-27 14:21:41.789][073971][debug][connection] [source/common/network/connection_impl.cc:183] [C6] closing socket: 0
+[2019-02-27 14:21:41.789][073971][debug][main] [source/server/connection_handler_impl.cc:68] [C6] adding to cleanup list
+[2019-02-27 14:21:43.716][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:43.716][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:43.741][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:44.206][073968][debug][main] [source/server/connection_handler_impl.cc:236] [C8] new connection
+[2019-02-27 14:21:44.206][073968][debug][http] [source/common/http/conn_manager_impl.cc:200] [C8] new stream
+[2019-02-27 14:21:44.206][073968][debug][http] [source/common/http/conn_manager_impl.cc:529] [C8][S13356652986465030715] request headers complete (end_stream=true):
+':authority', '127.0.0.1:10000'
+':path', '/rate'
+':method', 'GET'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+
+[2019-02-27 14:21:44.206][073968][debug][http] [source/common/http/conn_manager_impl.cc:928] [C8][S13356652986465030715] request end stream
+[2019-02-27 14:21:44.206][073968][debug][router] [source/common/router/router.cc:264] [C0][S17275893728585197013] cluster 'rate_limit_service' match for URL '/envoy.service.ratelimit.v2.RateLimitService/ShouldRateLimit'
+[2019-02-27 14:21:44.206][073968][debug][router] [source/common/router/router.cc:322] [C0][S17275893728585197013] router decoding headers:
+':method', 'POST'
+':path', '/envoy.service.ratelimit.v2.RateLimitService/ShouldRateLimit'
+':authority', 'rate_limit_service'
+':scheme', 'http'
+'te', 'trailers'
+'grpc-timeout', '20m'
+'content-type', 'application/grpc'
+'x-envoy-internal', 'true'
+'x-forwarded-for', '192.168.0.4'
+'x-envoy-expected-rq-timeout-ms', '20'
+
+[2019-02-27 14:21:44.206][073968][debug][client] [source/common/http/codec_client.cc:26] [C9] connecting
+[2019-02-27 14:21:44.206][073968][debug][connection] [source/common/network/connection_impl.cc:634] [C9] connecting to 127.0.0.1:8081
+[2019-02-27 14:21:44.206][073968][debug][connection] [source/common/network/connection_impl.cc:643] [C9] connection in progress
+[2019-02-27 14:21:44.206][073968][debug][http2] [source/common/http/http2/codec_impl.cc:732] [C9] setting stream-level initial window size to 268435456
+[2019-02-27 14:21:44.206][073968][debug][http2] [source/common/http/http2/codec_impl.cc:754] [C9] updating connection-level initial window size to 268435456
+[2019-02-27 14:21:44.206][073968][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:21:44.206][073968][debug][connection] [source/common/network/connection_impl.cc:516] [C9] connected
+[2019-02-27 14:21:44.206][073968][debug][client] [source/common/http/codec_client.cc:64] [C9] connected
+[2019-02-27 14:21:44.206][073968][debug][pool] [source/common/http/http2/conn_pool.cc:83] [C9] creating stream
+[2019-02-27 14:21:44.206][073968][debug][router] [source/common/router/router.cc:1007] [C0][S17275893728585197013] pool ready
+[2019-02-27 14:21:44.207][073968][debug][router] [source/common/router/router.cc:609] [C0][S17275893728585197013] upstream headers complete: end_stream=false
+[2019-02-27 14:21:44.207][073968][debug][http] [source/common/http/async_client_impl.cc:92] async http request response headers (end_stream=false):
+':status', '200'
+'content-type', 'application/grpc'
+'x-envoy-upstream-service-time', '0'
+
+[2019-02-27 14:21:44.207][073968][debug][client] [source/common/http/codec_client.cc:95] [C9] response complete
+[2019-02-27 14:21:44.207][073968][debug][pool] [source/common/http/http2/conn_pool.cc:222] [C9] destroying stream: 0 remaining
+[2019-02-27 14:21:44.207][073968][debug][http] [source/common/http/async_client_impl.cc:107] async http request response trailers:
+'grpc-status', '0'
+'grpc-message', ''
+
+[2019-02-27 14:21:44.207][073968][debug][router] [source/common/router/router.cc:264] [C8][S13356652986465030715] cluster 'some_service' match for URL '/rate'
+[2019-02-27 14:21:44.207][073968][debug][router] [source/common/router/router.cc:322] [C8][S13356652986465030715] router decoding headers:
+':authority', '127.0.0.1:10000'
+':path', '/rate'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', '46814bad-3de9-4167-9b62-6c0a5c3803f9'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+[2019-02-27 14:21:44.207][073968][debug][pool] [source/common/http/http1/conn_pool.cc:80] creating a new connection
+[2019-02-27 14:21:44.207][073968][debug][client] [source/common/http/codec_client.cc:26] [C10] connecting
+[2019-02-27 14:21:44.207][073968][debug][connection] [source/common/network/connection_impl.cc:634] [C10] connecting to 127.0.0.1:5000
+[2019-02-27 14:21:44.207][073968][debug][connection] [source/common/network/connection_impl.cc:643] [C10] connection in progress
+[2019-02-27 14:21:44.207][073968][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:21:44.207][073968][debug][http2] [source/common/http/http2/codec_impl.cc:564] [C9] stream closed: 0
+[2019-02-27 14:21:44.207][073968][debug][connection] [source/common/network/connection_impl.cc:516] [C10] connected
+[2019-02-27 14:21:44.207][073968][debug][client] [source/common/http/codec_client.cc:64] [C10] connected
+[2019-02-27 14:21:44.207][073968][debug][pool] [source/common/http/http1/conn_pool.cc:234] [C10] attaching to next request
+[2019-02-27 14:21:44.207][073968][debug][router] [source/common/router/router.cc:1007] [C8][S13356652986465030715] pool ready
+[2019-02-27 14:21:44.208][073968][debug][router] [source/common/router/router.cc:609] [C8][S13356652986465030715] upstream headers complete: end_stream=false
+[2019-02-27 14:21:44.208][073968][debug][http] [source/common/http/conn_manager_impl.cc:1150] [C8][S13356652986465030715] encoding headers via codec (end_stream=false):
+':status', '404'
+'server', 'envoy'
+'date', 'Wed, 27 Feb 2019 06:21:44 GMT'
+'content-type', 'text/html'
+'x-envoy-upstream-service-time', '0'
+
+[2019-02-27 14:21:44.208][073968][debug][connection] [source/common/network/connection_impl.cc:501] [C10] remote close
+[2019-02-27 14:21:44.208][073968][debug][connection] [source/common/network/connection_impl.cc:183] [C10] closing socket: 0
+[2019-02-27 14:21:44.208][073968][debug][client] [source/common/http/codec_client.cc:95] [C10] response complete
+[2019-02-27 14:21:44.208][073968][debug][pool] [source/common/http/http1/conn_pool.cc:191] [C10] response complete
+[2019-02-27 14:21:44.208][073968][debug][pool] [source/common/http/http1/conn_pool.cc:196] [C10] saw upstream connection: close
+[2019-02-27 14:21:44.208][073968][debug][client] [source/common/http/codec_client.cc:82] [C10] disconnect. resetting 0 pending requests
+[2019-02-27 14:21:44.208][073968][debug][pool] [source/common/http/http1/conn_pool.cc:121] [C10] client disconnected
+[2019-02-27 14:21:44.209][073968][debug][connection] [source/common/network/connection_impl.cc:501] [C8] remote close
+[2019-02-27 14:21:44.209][073968][debug][connection] [source/common/network/connection_impl.cc:183] [C8] closing socket: 0
+[2019-02-27 14:21:44.209][073968][debug][main] [source/server/connection_handler_impl.cc:68] [C8] adding to cleanup list
+[2019-02-27 14:21:48.718][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:48.718][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:48.742][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:53.720][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:53.720][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:53.744][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:21:58.722][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:21:58.722][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:21:58.745][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:03.722][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:03.722][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:03.746][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:08.723][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:08.724][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:08.748][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:13.724][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:13.724][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:13.749][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:18.725][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:18.725][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:18.750][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:23.727][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:23.727][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:23.751][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:28.729][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:28.729][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:28.754][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:33.730][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:33.730][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:33.755][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:38.731][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:38.731][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:38.757][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:43.732][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:43.732][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:43.759][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:48.734][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:48.734][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:48.760][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:53.735][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:53.735][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:53.763][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:22:58.736][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:22:58.736][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:22:58.764][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:03.737][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:03.737][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:03.766][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:08.739][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:08.739][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:08.766][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:13.740][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:13.740][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:13.769][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:18.742][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:18.742][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:18.772][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:23.744][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:23.744][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:23.776][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:28.746][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:28.746][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:28.777][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:33.747][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:33.747][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:33.781][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:38.747][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:38.747][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:38.781][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:43.748][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:43.748][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:43.782][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:48.751][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:48.751][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:48.785][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:53.752][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:53.752][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:53.786][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:23:58.753][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:23:58.754][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:23:58.787][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:03.754][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:03.754][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:03.789][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:08.754][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:08.755][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:08.791][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:13.755][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:13.755][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:13.792][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:18.757][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:18.757][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:18.794][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:23.758][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:23.758][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:23.795][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:28.760][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:28.760][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:28.797][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:33.762][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:33.762][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:33.799][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:38.763][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:38.763][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:38.801][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:43.763][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:43.763][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:43.802][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:48.767][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:48.767][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:48.803][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:53.768][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:53.768][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:53.806][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:24:58.769][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:24:58.770][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:24:58.807][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:25:03.770][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:25:03.770][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:25:03.811][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:25:08.771][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:25:08.771][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:25:08.812][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:25:13.772][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:25:13.772][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:25:13.814][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:25:18.775][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:25:18.775][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:25:18.815][073961][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:25:23.776][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1177] starting async DNS resolution for 127.0.0.1
+[2019-02-27 14:25:23.776][073961][debug][upstream] [source/common/upstream/upstream_impl.cc:1184] async DNS resolution complete for 127.0.0.1
+[2019-02-27 14:25:23.817][073961][debug][main] [source/server/server.cc:143] flushing stats
