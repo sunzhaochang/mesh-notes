@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nohup ../bin/envoy --v2-config-only --service-cluster cluster0 --service-node node0 -l debug -c ./bootstrap.yaml > ../log/envoy.log 2>&1 &

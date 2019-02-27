@@ -1,0 +1,162 @@
+[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:206] initializing epoch 0 (hot restart version=10.200.16384.127.options=capacity=16384, num_slots=8209 hash=228984379728933363 size=2654312)
+[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:208] statically linked extensions:
+[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:210]   access_loggers: envoy.file_access_log,envoy.http_grpc_access_log
+[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:213]   filters.http: envoy.buffer,envoy.cors,envoy.ext_authz,envoy.fault,envoy.filters.http.header_to_metadata,envoy.filters.http.jwt_authn,envoy.filters.http.rbac,envoy.grpc_http1_bridge,envoy.grpc_json_transcoder,envoy.grpc_web,envoy.gzip,envoy.health_check,envoy.http_dynamo_filter,envoy.ip_tagging,envoy.lua,envoy.rate_limit,envoy.router,envoy.squash
+[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:216]   filters.listener: envoy.listener.original_dst,envoy.listener.proxy_protocol,envoy.listener.tls_inspector
+[2019-02-27 14:06:47.457][073074][info][main] [source/server/server.cc:219]   filters.network: envoy.client_ssl_auth,envoy.echo,envoy.ext_authz,envoy.filters.network.dubbo_proxy,envoy.filters.network.rbac,envoy.filters.network.sni_cluster,envoy.filters.network.thrift_proxy,envoy.http_connection_manager,envoy.mongo_proxy,envoy.ratelimit,envoy.redis_proxy,envoy.tcp_proxy
+[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:221]   stat_sinks: envoy.dog_statsd,envoy.metrics_service,envoy.stat_sinks.hystrix,envoy.statsd
+[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:223]   tracers: envoy.dynamic.ot,envoy.lightstep,envoy.tracers.datadog,envoy.zipkin
+[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:226]   transport_sockets.downstream: envoy.transport_sockets.alts,envoy.transport_sockets.capture,raw_buffer,tls
+[2019-02-27 14:06:47.458][073074][info][main] [source/server/server.cc:229]   transport_sockets.upstream: envoy.transport_sockets.alts,envoy.transport_sockets.capture,raw_buffer,tls
+[2019-02-27 14:06:47.461][073074][info][main] [source/server/server.cc:271] admin address: 0.0.0.0:9901
+[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:06:47.461][073074][debug][main] [source/server/overload_manager_impl.cc:171] No overload action configured for envoy.overload_actions.stop_accepting_connections.
+[2019-02-27 14:06:47.461][073074][info][config] [source/server/configuration_impl.cc:51] loading 0 static secret(s)
+[2019-02-27 14:06:47.461][073074][info][config] [source/server/configuration_impl.cc:57] loading 2 cluster(s)
+[2019-02-27 14:06:47.465][073078][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/upstream_impl.cc:583] initializing secondary cluster accesslog_cluster completed
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:91] cm init: init complete: cluster=accesslog_cluster primary=0 secondary=0
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:63] cm init: adding: cluster=accesslog_cluster primary=0 secondary=0
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/upstream_impl.cc:583] initializing secondary cluster some_service completed
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:91] cm init: init complete: cluster=some_service primary=0 secondary=0
+[2019-02-27 14:06:47.466][073074][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:63] cm init: adding: cluster=some_service primary=0 secondary=0
+[2019-02-27 14:06:47.466][073074][info][upstream] [source/common/upstream/cluster_manager_impl.cc:136] cm init: all clusters initialized
+[2019-02-27 14:06:47.466][073074][info][config] [source/server/configuration_impl.cc:62] loading 1 listener(s)
+[2019-02-27 14:06:47.466][073074][debug][config] [source/server/configuration_impl.cc:64] listener #0:
+[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:640] begin add/update listener: name=listener_0 hash=6043571183013514745
+[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:40]   filter #0:
+[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:41]     name: envoy.http_connection_manager
+[2019-02-27 14:06:47.466][073074][debug][config] [source/server/listener_manager_impl.cc:44]   config: {"codec_type":"AUTO","route_config":{"virtual_hosts":[{"domains":["*"],"routes":[{"route":{"cluster":"some_service"},"match":{"prefix":"/"}}],"name":"local_service"}],"name":"local_route"},"stat_prefix":"ingress_http","generate_request_id":true,"access_log":[{"config":{"common_config":{"grpc_service":{"envoy_grpc":{"cluster_name":"accesslog_cluster"}},"log_name":"accesslog"}},"name":"envoy.http_grpc_access_log"}],"tracing":{"operation_name":"ingress"},"http_filters":[{"name":"envoy.router"}]}
+[2019-02-27 14:06:47.468][073074][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:298]     http filter #0
+[2019-02-27 14:06:47.468][073074][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:299]       name: envoy.router
+[2019-02-27 14:06:47.468][073074][debug][config] [source/extensions/filters/network/http_connection_manager/config.cc:303]     config: {}
+[2019-02-27 14:06:47.468][073074][debug][config] [source/server/listener_manager_impl.cc:527] add active listener: name=listener_0, hash=6043571183013514745, address=0.0.0.0:10000
+[2019-02-27 14:06:47.468][073074][info][config] [source/server/configuration_impl.cc:95] loading tracing configuration
+[2019-02-27 14:06:47.468][073074][info][config] [source/server/configuration_impl.cc:115] loading stats sink configuration
+[2019-02-27 14:06:47.469][073074][info][main] [source/server/server.cc:429] all clusters initialized. initializing init manager
+[2019-02-27 14:06:47.469][073074][info][config] [source/server/listener_manager_impl.cc:910] all dependencies initialized. starting workers
+[2019-02-27 14:06:47.469][073080][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
+[2019-02-27 14:06:47.470][073081][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:06:47.470][073082][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
+[2019-02-27 14:06:47.470][073080][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:06:47.470][073083][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:06:47.471][073074][info][main] [source/server/server.cc:457] starting main dispatch loop
+[2019-02-27 14:06:47.471][073084][debug][main] [source/server/worker_impl.cc:98] worker entering dispatch loop
+[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
+[2019-02-27 14:06:47.471][073085][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
+[2019-02-27 14:06:47.471][073086][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
+[2019-02-27 14:06:47.471][073081][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster accesslog_cluster
+[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:817] adding TLS initial cluster some_service
+[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
+[2019-02-27 14:06:47.471][073083][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster accesslog_cluster
+[2019-02-27 14:06:47.471][073084][debug][upstream] [source/common/upstream/cluster_manager_impl.cc:952] membership update for TLS cluster some_service
+[2019-02-27 14:06:47.472][073087][debug][grpc] [source/common/grpc/google_async_client_impl.cc:41] completionThread running
+[2019-02-27 14:06:52.470][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:06:56.590][073084][debug][main] [source/server/connection_handler_impl.cc:236] [C0] new connection
+[2019-02-27 14:06:56.591][073084][debug][http] [source/common/http/conn_manager_impl.cc:200] [C0] new stream
+[2019-02-27 14:06:56.592][073084][debug][http] [source/common/http/conn_manager_impl.cc:529] [C0][S2394037851775756397] request headers complete (end_stream=true):
+':authority', '127.0.0.1:10000'
+':path', '/'
+':method', 'GET'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+
+[2019-02-27 14:06:56.592][073084][debug][http] [source/common/http/conn_manager_impl.cc:928] [C0][S2394037851775756397] request end stream
+[2019-02-27 14:06:56.592][073084][debug][router] [source/common/router/router.cc:264] [C0][S2394037851775756397] cluster 'some_service' match for URL '/'
+[2019-02-27 14:06:56.592][073084][debug][router] [source/common/router/router.cc:322] [C0][S2394037851775756397] router decoding headers:
+':authority', '127.0.0.1:10000'
+':path', '/'
+':method', 'GET'
+':scheme', 'http'
+'user-agent', 'curl/7.29.0'
+'accept', '*/*'
+'x-forwarded-proto', 'http'
+'x-request-id', 'd2532bfd-3bdc-9ad5-8563-8dead3014310'
+'x-envoy-expected-rq-timeout-ms', '15000'
+
+[2019-02-27 14:06:56.592][073084][debug][pool] [source/common/http/http1/conn_pool.cc:80] creating a new connection
+[2019-02-27 14:06:56.592][073084][debug][client] [source/common/http/codec_client.cc:26] [C1] connecting
+[2019-02-27 14:06:56.592][073084][debug][connection] [source/common/network/connection_impl.cc:634] [C1] connecting to 127.0.0.1:5001
+[2019-02-27 14:06:56.592][073084][debug][connection] [source/common/network/connection_impl.cc:643] [C1] connection in progress
+[2019-02-27 14:06:56.592][073084][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:06:56.592][073084][debug][connection] [source/common/network/connection_impl.cc:516] [C1] connected
+[2019-02-27 14:06:56.592][073084][debug][client] [source/common/http/codec_client.cc:64] [C1] connected
+[2019-02-27 14:06:56.592][073084][debug][pool] [source/common/http/http1/conn_pool.cc:234] [C1] attaching to next request
+[2019-02-27 14:06:56.592][073084][debug][router] [source/common/router/router.cc:1007] [C0][S2394037851775756397] pool ready
+[2019-02-27 14:06:56.593][073084][debug][router] [source/common/router/router.cc:609] [C0][S2394037851775756397] upstream headers complete: end_stream=false
+[2019-02-27 14:06:56.593][073084][debug][http] [source/common/http/conn_manager_impl.cc:1150] [C0][S2394037851775756397] encoding headers via codec (end_stream=false):
+':status', '200'
+'server', 'envoy'
+'date', 'Wed, 27 Feb 2019 06:06:56 GMT'
+'content-type', 'text/html; charset=ANSI_X3.4-1968'
+'content-length', '470'
+'x-envoy-upstream-service-time', '0'
+
+[2019-02-27 14:06:56.593][073084][debug][client] [source/common/http/codec_client.cc:95] [C1] response complete
+[2019-02-27 14:06:56.593][073084][debug][pool] [source/common/http/http1/conn_pool.cc:191] [C1] response complete
+[2019-02-27 14:06:56.593][073084][debug][pool] [source/common/http/http1/conn_pool.cc:229] [C1] moving to ready
+[2019-02-27 14:06:56.593][073084][debug][connection] [source/common/network/connection_impl.cc:501] [C1] remote close
+[2019-02-27 14:06:56.593][073084][debug][connection] [source/common/network/connection_impl.cc:183] [C1] closing socket: 0
+[2019-02-27 14:06:56.593][073084][debug][client] [source/common/http/codec_client.cc:82] [C1] disconnect. resetting 0 pending requests
+[2019-02-27 14:06:56.593][073084][debug][pool] [source/common/http/http1/conn_pool.cc:121] [C1] client disconnected
+[2019-02-27 14:06:56.594][073084][debug][router] [source/common/router/router.cc:264] [C0][S8570762764156844560] cluster 'accesslog_cluster' match for URL '/envoy.service.accesslog.v2.AccessLogService/StreamAccessLogs'
+[2019-02-27 14:06:56.594][073084][debug][router] [source/common/router/router.cc:322] [C0][S8570762764156844560] router decoding headers:
+':method', 'POST'
+':path', '/envoy.service.accesslog.v2.AccessLogService/StreamAccessLogs'
+':authority', 'accesslog_cluster'
+':scheme', 'http'
+'te', 'trailers'
+'content-type', 'application/grpc'
+'x-envoy-internal', 'true'
+'x-forwarded-for', '192.168.0.4'
+
+[2019-02-27 14:06:56.594][073084][debug][client] [source/common/http/codec_client.cc:26] [C2] connecting
+[2019-02-27 14:06:56.594][073084][debug][connection] [source/common/network/connection_impl.cc:634] [C2] connecting to 127.0.0.1:18090
+[2019-02-27 14:06:56.594][073084][debug][connection] [source/common/network/connection_impl.cc:643] [C2] connection in progress
+[2019-02-27 14:06:56.594][073084][debug][http2] [source/common/http/http2/codec_impl.cc:732] [C2] setting stream-level initial window size to 268435456
+[2019-02-27 14:06:56.594][073084][debug][http2] [source/common/http/http2/codec_impl.cc:754] [C2] updating connection-level initial window size to 268435456
+[2019-02-27 14:06:56.594][073084][debug][pool] [source/common/http/conn_pool_base.cc:20] queueing request due to no available connections
+[2019-02-27 14:06:56.594][073084][debug][connection] [source/common/network/connection_impl.cc:516] [C2] connected
+[2019-02-27 14:06:56.594][073084][debug][client] [source/common/http/codec_client.cc:64] [C2] connected
+[2019-02-27 14:06:56.594][073084][debug][pool] [source/common/http/http2/conn_pool.cc:83] [C2] creating stream
+[2019-02-27 14:06:56.594][073084][debug][router] [source/common/router/router.cc:1007] [C0][S8570762764156844560] pool ready
+[2019-02-27 14:06:56.595][073084][debug][connection] [source/common/network/connection_impl.cc:501] [C0] remote close
+[2019-02-27 14:06:56.595][073084][debug][connection] [source/common/network/connection_impl.cc:183] [C0] closing socket: 0
+[2019-02-27 14:06:56.595][073084][debug][main] [source/server/connection_handler_impl.cc:68] [C0] adding to cleanup list
+[2019-02-27 14:06:57.474][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:02.475][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:07.476][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:12.478][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:17.479][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:22.480][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:27.480][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:32.481][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:37.482][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:42.483][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:47.485][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:52.487][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:07:57.488][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:02.489][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:07.490][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:12.491][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:17.493][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:22.494][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:27.496][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:32.496][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:37.497][073074][debug][main] [source/server/server.cc:143] flushing stats
+[2019-02-27 14:08:42.499][073074][debug][main] [source/server/server.cc:143] flushing stats
