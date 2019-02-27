@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nohup ../bin/envoy --v2-config-only  -l debug -c ./bootstrap.yaml > ../log/envoy.log 2>&1 &
+
+

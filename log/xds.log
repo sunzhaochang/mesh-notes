@@ -1,0 +1,235 @@
+time="2019-02-27T14:30:21+08:00" level=info msg="Starting control plane"
+time="2019-02-27T14:30:21+08:00" level=info msg="gateway listening HTTP/1.1" port=18001
+time="2019-02-27T14:30:21+08:00" level=info msg="management server listening" port=18000
+time="2019-02-27T14:30:21+08:00" level=error msg="http: Server closed"
+time="2019-02-27T14:30:22+08:00" level=info msg="OnStreamOpen 1 open for type.googleapis.com/envoy.api.v2.Cluster"
+time="2019-02-27T14:30:22+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:22+08:00" level=info msg="open watch 1 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"946322\""
+time="2019-02-27T14:30:22+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=1
+time="2019-02-27T14:30:22+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:22+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:22+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 1"
+time="2019-02-27T14:30:22+08:00" level=info msg="respond open watch 1[] with new version \"1\""
+time="2019-02-27T14:30:22+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"946322\" with version \"1\""
+time="2019-02-27T14:30:22+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:22+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=1
+time="2019-02-27T14:30:22+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:22+08:00" level=info msg="open watch 2 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"1\""
+time="2019-02-27T14:30:22+08:00" level=info msg="OnStreamOpen 2 open for "
+time="2019-02-27T14:30:25+08:00" level=info msg="OnStreamOpen 3 open for type.googleapis.com/envoy.api.v2.Listener"
+time="2019-02-27T14:30:25+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:25+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"946322\" with version \"1\""
+time="2019-02-27T14:30:25+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:25+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=3
+time="2019-02-27T14:30:25+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:25+08:00" level=info msg="open watch 3 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"1\""
+time="2019-02-27T14:30:27+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:27+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:27+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 2"
+time="2019-02-27T14:30:27+08:00" level=info msg="respond open watch 2[] with new version \"2\""
+time="2019-02-27T14:30:27+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"1\" with version \"2\""
+time="2019-02-27T14:30:27+08:00" level=info msg="respond open watch 3[] with new version \"2\""
+time="2019-02-27T14:30:27+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"1\" with version \"2\""
+time="2019-02-27T14:30:27+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:27+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=4
+time="2019-02-27T14:30:27+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:27+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=4
+time="2019-02-27T14:30:27+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:27+08:00" level=info msg="open watch 4 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"2\""
+time="2019-02-27T14:30:27+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:27+08:00" level=info msg="open watch 5 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"2\""
+time="2019-02-27T14:30:32+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:32+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:32+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 3"
+time="2019-02-27T14:30:32+08:00" level=info msg="respond open watch 4[] with new version \"3\""
+time="2019-02-27T14:30:32+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"2\" with version \"3\""
+time="2019-02-27T14:30:32+08:00" level=info msg="respond open watch 5[] with new version \"3\""
+time="2019-02-27T14:30:32+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"2\" with version \"3\""
+time="2019-02-27T14:30:32+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:32+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=6
+time="2019-02-27T14:30:32+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:32+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=6
+time="2019-02-27T14:30:32+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:32+08:00" level=info msg="open watch 6 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"3\""
+time="2019-02-27T14:30:32+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:32+08:00" level=info msg="open watch 7 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"3\""
+time="2019-02-27T14:30:37+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:37+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:37+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 4"
+time="2019-02-27T14:30:37+08:00" level=info msg="respond open watch 6[] with new version \"4\""
+time="2019-02-27T14:30:37+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"3\" with version \"4\""
+time="2019-02-27T14:30:37+08:00" level=info msg="respond open watch 7[] with new version \"4\""
+time="2019-02-27T14:30:37+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"3\" with version \"4\""
+time="2019-02-27T14:30:37+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:37+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=8
+time="2019-02-27T14:30:37+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:37+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=8
+time="2019-02-27T14:30:37+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:37+08:00" level=info msg="open watch 8 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"4\""
+time="2019-02-27T14:30:37+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:37+08:00" level=info msg="open watch 9 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"4\""
+time="2019-02-27T14:30:42+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:42+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:42+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 5"
+time="2019-02-27T14:30:42+08:00" level=info msg="respond open watch 8[] with new version \"5\""
+time="2019-02-27T14:30:42+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"4\" with version \"5\""
+time="2019-02-27T14:30:42+08:00" level=info msg="respond open watch 9[] with new version \"5\""
+time="2019-02-27T14:30:42+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"4\" with version \"5\""
+time="2019-02-27T14:30:42+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:42+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=10
+time="2019-02-27T14:30:42+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:42+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=10
+time="2019-02-27T14:30:42+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:42+08:00" level=info msg="open watch 10 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"5\""
+time="2019-02-27T14:30:42+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:42+08:00" level=info msg="open watch 11 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"5\""
+time="2019-02-27T14:30:47+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:47+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:47+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 6"
+time="2019-02-27T14:30:47+08:00" level=info msg="respond open watch 10[] with new version \"6\""
+time="2019-02-27T14:30:47+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"5\" with version \"6\""
+time="2019-02-27T14:30:47+08:00" level=info msg="respond open watch 11[] with new version \"6\""
+time="2019-02-27T14:30:47+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"5\" with version \"6\""
+time="2019-02-27T14:30:47+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:47+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=12
+time="2019-02-27T14:30:47+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:47+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=12
+time="2019-02-27T14:30:47+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:47+08:00" level=info msg="open watch 12 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"6\""
+time="2019-02-27T14:30:47+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:47+08:00" level=info msg="open watch 13 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"6\""
+time="2019-02-27T14:30:52+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:52+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:52+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 7"
+time="2019-02-27T14:30:52+08:00" level=info msg="respond open watch 12[] with new version \"7\""
+time="2019-02-27T14:30:52+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"6\" with version \"7\""
+time="2019-02-27T14:30:52+08:00" level=info msg="respond open watch 13[] with new version \"7\""
+time="2019-02-27T14:30:52+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"6\" with version \"7\""
+time="2019-02-27T14:30:52+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:52+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=14
+time="2019-02-27T14:30:52+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:52+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=14
+time="2019-02-27T14:30:52+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:52+08:00" level=info msg="open watch 14 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"7\""
+time="2019-02-27T14:30:52+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:52+08:00" level=info msg="open watch 15 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"7\""
+time="2019-02-27T14:30:57+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:30:57+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:30:57+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 8"
+time="2019-02-27T14:30:57+08:00" level=info msg="respond open watch 14[] with new version \"8\""
+time="2019-02-27T14:30:57+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"7\" with version \"8\""
+time="2019-02-27T14:30:57+08:00" level=info msg="respond open watch 15[] with new version \"8\""
+time="2019-02-27T14:30:57+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"7\" with version \"8\""
+time="2019-02-27T14:30:57+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:57+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=16
+time="2019-02-27T14:30:57+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:30:57+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=16
+time="2019-02-27T14:30:57+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:57+08:00" level=info msg="open watch 16 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"8\""
+time="2019-02-27T14:30:57+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:30:57+08:00" level=info msg="open watch 17 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"8\""
+time="2019-02-27T14:31:02+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:31:02+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:31:02+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 9"
+time="2019-02-27T14:31:02+08:00" level=info msg="respond open watch 17[] with new version \"9\""
+time="2019-02-27T14:31:02+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"8\" with version \"9\""
+time="2019-02-27T14:31:02+08:00" level=info msg="respond open watch 16[] with new version \"9\""
+time="2019-02-27T14:31:02+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"8\" with version \"9\""
+time="2019-02-27T14:31:02+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:02+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=18
+time="2019-02-27T14:31:02+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:02+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=18
+time="2019-02-27T14:31:02+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:02+08:00" level=info msg="open watch 18 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"9\""
+time="2019-02-27T14:31:02+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:02+08:00" level=info msg="open watch 19 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"9\""
+time="2019-02-27T14:31:07+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:31:07+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:31:07+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 10"
+time="2019-02-27T14:31:07+08:00" level=info msg="respond open watch 18[] with new version \"10\""
+time="2019-02-27T14:31:07+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"9\" with version \"10\""
+time="2019-02-27T14:31:07+08:00" level=info msg="respond open watch 19[] with new version \"10\""
+time="2019-02-27T14:31:07+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"9\" with version \"10\""
+time="2019-02-27T14:31:07+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:07+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=20
+time="2019-02-27T14:31:07+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:07+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=20
+time="2019-02-27T14:31:07+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:07+08:00" level=info msg="open watch 20 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"10\""
+time="2019-02-27T14:31:07+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:07+08:00" level=info msg="open watch 21 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"10\""
+time="2019-02-27T14:31:12+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:31:12+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:31:12+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 11"
+time="2019-02-27T14:31:12+08:00" level=info msg="respond open watch 20[] with new version \"11\""
+time="2019-02-27T14:31:12+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"10\" with version \"11\""
+time="2019-02-27T14:31:12+08:00" level=info msg="respond open watch 21[] with new version \"11\""
+time="2019-02-27T14:31:12+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"10\" with version \"11\""
+time="2019-02-27T14:31:12+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:12+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=22
+time="2019-02-27T14:31:12+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:12+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=22
+time="2019-02-27T14:31:12+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:12+08:00" level=info msg="open watch 22 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"11\""
+time="2019-02-27T14:31:12+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:12+08:00" level=info msg="open watch 23 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"11\""
+time="2019-02-27T14:31:17+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:31:17+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:31:17+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 12"
+time="2019-02-27T14:31:17+08:00" level=info msg="respond open watch 22[] with new version \"12\""
+time="2019-02-27T14:31:17+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"11\" with version \"12\""
+time="2019-02-27T14:31:17+08:00" level=info msg="respond open watch 23[] with new version \"12\""
+time="2019-02-27T14:31:17+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"11\" with version \"12\""
+time="2019-02-27T14:31:17+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:17+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=24
+time="2019-02-27T14:31:17+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:17+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=24
+time="2019-02-27T14:31:17+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:17+08:00" level=info msg="open watch 24 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"12\""
+time="2019-02-27T14:31:17+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:17+08:00" level=info msg="open watch 25 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"12\""
+time="2019-02-27T14:31:22+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:31:22+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:31:22+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 13"
+time="2019-02-27T14:31:22+08:00" level=info msg="respond open watch 24[] with new version \"13\""
+time="2019-02-27T14:31:22+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"12\" with version \"13\""
+time="2019-02-27T14:31:22+08:00" level=info msg="respond open watch 25[] with new version \"13\""
+time="2019-02-27T14:31:22+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"12\" with version \"13\""
+time="2019-02-27T14:31:22+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:22+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=26
+time="2019-02-27T14:31:22+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:22+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=26
+time="2019-02-27T14:31:22+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:22+08:00" level=info msg="open watch 26 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"13\""
+time="2019-02-27T14:31:22+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:22+08:00" level=info msg="open watch 27 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"13\""
+time="2019-02-27T14:31:27+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:31:27+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:31:27+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 14"
+time="2019-02-27T14:31:27+08:00" level=info msg="respond open watch 26[] with new version \"14\""
+time="2019-02-27T14:31:27+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"13\" with version \"14\""
+time="2019-02-27T14:31:27+08:00" level=info msg="respond open watch 27[] with new version \"14\""
+time="2019-02-27T14:31:27+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"13\" with version \"14\""
+time="2019-02-27T14:31:27+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:27+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=28
+time="2019-02-27T14:31:27+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:27+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=28
+time="2019-02-27T14:31:27+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:27+08:00" level=info msg="open watch 28 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"14\""
+time="2019-02-27T14:31:27+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:27+08:00" level=info msg="open watch 29 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"14\""
+time="2019-02-27T14:31:32+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating cluster service_bbc"
+time="2019-02-27T14:31:32+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating listener listener_0"
+time="2019-02-27T14:31:32+08:00" level=info msg=">>>>>>>>>>>>>>>>>>> creating snapshot Version 15"
+time="2019-02-27T14:31:32+08:00" level=info msg="respond open watch 28[] with new version \"15\""
+time="2019-02-27T14:31:32+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Listener[] version \"14\" with version \"15\""
+time="2019-02-27T14:31:32+08:00" level=info msg="respond open watch 29[] with new version \"15\""
+time="2019-02-27T14:31:32+08:00" level=info msg="respond type.googleapis.com/envoy.api.v2.Cluster[] version \"14\" with version \"15\""
+time="2019-02-27T14:31:32+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:32+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=30
+time="2019-02-27T14:31:32+08:00" level=info msg=OnStreamResponse...
+time="2019-02-27T14:31:32+08:00" level=info msg="cb.Report()  callbacks" fetches=0 requests=30
+time="2019-02-27T14:31:32+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:32+08:00" level=info msg="open watch 30 for type.googleapis.com/envoy.api.v2.Listener[] from nodeID \"test-id\", version \"15\""
+time="2019-02-27T14:31:32+08:00" level=info msg=OnStreamRequest
+time="2019-02-27T14:31:32+08:00" level=info msg="open watch 31 for type.googleapis.com/envoy.api.v2.Cluster[] from nodeID \"test-id\", version \"15\""
