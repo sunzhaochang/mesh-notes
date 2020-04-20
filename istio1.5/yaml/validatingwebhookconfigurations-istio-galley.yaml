@@ -1,0 +1,19 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"admissionregistration.k8s.io/v1beta1","kind":"ValidatingWebhookConfiguration","metadata":{"annotations":{},"labels":{"app":"galley","istio":"galley","operator.istio.io/component":"Pilot","operator.istio.io/managed":"Reconcile","operator.istio.io/version":"1.5.0","release":"istio"},"name":"istio-galley"},"webhooks":null}
+  creationTimestamp: "2020-03-28T07:23:42Z"
+  generation: 1
+  labels:
+    app: galley
+    istio: galley
+    operator.istio.io/component: Pilot
+    operator.istio.io/managed: Reconcile
+    operator.istio.io/version: 1.5.0
+    release: istio
+  name: istio-galley
+  resourceVersion: "4097104"
+  selfLink: /apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/istio-galley
+  uid: 626a1dfd-019f-42e7-90d9-ab69303e1877

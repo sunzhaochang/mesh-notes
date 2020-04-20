@@ -1,0 +1,31 @@
+apiVersion: v1
+data:
+  root-cert.pem: |
+    -----BEGIN CERTIFICATE-----
+    MIIC3jCCAcagAwIBAgIRAP7gj8kqULSF50BgcdOSlSQwDQYJKoZIhvcNAQELBQAw
+    GDEWMBQGA1UEChMNY2x1c3Rlci5sb2NhbDAeFw0yMDAzMjgwNzIzNDRaFw0zMDAz
+    MjYwNzIzNDRaMBgxFjAUBgNVBAoTDWNsdXN0ZXIubG9jYWwwggEiMA0GCSqGSIb3
+    DQEBAQUAA4IBDwAwggEKAoIBAQDx8QPHghcnsJ8izWqSSx7b4pbfTtcMZJneBNd6
+    M8YV0MjHSG2WDlZzxX+d6PCBAsOAmO3q7MNCJon8cqk1vOdzNGEREq0LlJTaArmj
+    hEnK4vwR7wkrNgil/UjdFAGpzuPN/W4nVSE39KXtTC5gKwpIwpS4M8PgqHobf7fT
+    DgsJw3aFDvTBM1Byhroh1byfUGSOGd/QduUWPISH5v9KFuQGi3fsqT8sh8GlhnD4
+    e0nL+zf6R8G8Z8DpgA/4ZlNmJtuhZitwQp9N+zHOnolb35/Kq0yueziiUp1pSAlI
+    wcN3t8E+5YsK7LfaxVJxQmHIzT8Ot8K17zlNOuNK8/a28J6VAgMBAAGjIzAhMA4G
+    A1UdDwEB/wQEAwICBDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IB
+    AQBlHGNYotCLeW8XLSUsiKCvZTr696lHzdEBWJu7sGt56A1yJZz5Q6X79QMUJRlg
+    O+jbzgSqC8C7gfrgPwghGWGbRIVwFwDecHad9bqHsLWs2FEzpTPknMgziDQIbnKl
+    EzIlMHfJYmgoKPehXevuMqqctc307QGyt17nDxgTZ3dNnhgBpzZs92MuMdqnQ2jU
+    yGVpxIQ0zKtYwyO5lPyIag/UhLMKBdvYO4c19JaKYG7PisjCJHdfMhu/fGQoiPFv
+    p09DRMDSZPQnYtDaljTPxv2yL11AGRzQ1IT4TT3Z4ayb2v94t2/cm+mgOO1ZJX7K
+    z0wbHxqIjH2kdaaSkusxfVZD
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-03-06T06:40:10Z"
+  labels:
+    istio.io/config: "true"
+  name: istio-ca-root-cert
+  namespace: default
+  resourceVersion: "4097154"
+  selfLink: /api/v1/namespaces/default/configmaps/istio-ca-root-cert
+  uid: fd9bde22-bbcf-4847-bfa4-3ca7c6e326d6

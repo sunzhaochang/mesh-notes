@@ -1,0 +1,334 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    sidecar.istio.io/status: '{"version":"1cdb312e0b39910b7401fa37c42113f6436e281598036cb126f9692adebf1545","initContainers":["istio-init"],"containers":["istio-proxy"],"volumes":["istio-envoy","podinfo","istiod-ca-cert"],"imagePullSecrets":null}'
+  creationTimestamp: "2020-03-26T07:06:58Z"
+  generateName: httpbin-779c54bf49-
+  labels:
+    app: httpbin
+    pod-template-hash: 779c54bf49
+    security.istio.io/tlsMode: istio
+    service.istio.io/canonical-name: httpbin
+    service.istio.io/canonical-revision: v1
+    version: v1
+  name: httpbin-779c54bf49-vvhw5
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: httpbin-779c54bf49
+    uid: f122bc26-9e92-4183-b0c6-65642364d0d2
+  resourceVersion: "3737276"
+  selfLink: /api/v1/namespaces/default/pods/httpbin-779c54bf49-vvhw5
+  uid: 49cde1a9-0740-4082-b4b6-252150d7a523
+spec:
+  containers:
+  - image: docker.io/kennethreitz/httpbin
+    imagePullPolicy: IfNotPresent
+    name: httpbin
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: httpbin-token-ktmrn
+      readOnly: true
+  - args:
+    - proxy
+    - sidecar
+    - --domain
+    - $(POD_NAMESPACE).svc.cluster.local
+    - --configPath
+    - /etc/istio/proxy
+    - --binaryPath
+    - /usr/local/bin/envoy
+    - --serviceCluster
+    - httpbin.$(POD_NAMESPACE)
+    - --drainDuration
+    - 45s
+    - --parentShutdownDuration
+    - 1m0s
+    - --discoveryAddress
+    - istiod.istio-system.svc:15012
+    - --zipkinAddress
+    - zipkin.istio-system:9411
+    - --proxyLogLevel=warning
+    - --proxyComponentLogLevel=misc:error
+    - --connectTimeout
+    - 10s
+    - --proxyAdminPort
+    - "15000"
+    - --concurrency
+    - "2"
+    - --controlPlaneAuthPolicy
+    - NONE
+    - --dnsRefreshRate
+    - 300s
+    - --statusPort
+    - "15020"
+    - --trust-domain=cluster.local
+    - --controlPlaneBootstrap=false
+    env:
+    - name: JWT_POLICY
+      value: first-party-jwt
+    - name: PILOT_CERT_PROVIDER
+      value: istiod
+    - name: CA_ADDR
+      value: istio-pilot.istio-system.svc:15012
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: INSTANCE_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    - name: SERVICE_ACCOUNT
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.serviceAccountName
+    - name: HOST_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.hostIP
+    - name: ISTIO_META_POD_PORTS
+      value: |-
+        [
+            {"containerPort":80,"protocol":"TCP"}
+        ]
+    - name: ISTIO_META_CLUSTER_ID
+      value: Kubernetes
+    - name: ISTIO_META_POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: ISTIO_META_CONFIG_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: ISTIO_META_INTERCEPTION_MODE
+      value: REDIRECT
+    - name: ISTIO_META_WORKLOAD_NAME
+      value: httpbin
+    - name: ISTIO_META_OWNER
+      value: kubernetes://apis/apps/v1/namespaces/default/deployments/httpbin
+    - name: ISTIO_META_MESH_ID
+      value: cluster.local
+    image: docker.io/istio/proxyv2:1.5.0
+    imagePullPolicy: IfNotPresent
+    name: istio-proxy
+    ports:
+    - containerPort: 15090
+      name: http-envoy-prom
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /healthz/ready
+        port: 15020
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 2
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      limits:
+        cpu: "2"
+        memory: 1Gi
+      requests:
+        cpu: 10m
+        memory: 40Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      privileged: false
+      readOnlyRootFilesystem: true
+      runAsGroup: 1337
+      runAsNonRoot: true
+      runAsUser: 1337
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/istio
+      name: istiod-ca-cert
+    - mountPath: /etc/istio/proxy
+      name: istio-envoy
+    - mountPath: /etc/istio/pod
+      name: podinfo
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: httpbin-token-ktmrn
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  initContainers:
+  - command:
+    - istio-iptables
+    - -p
+    - "15001"
+    - -z
+    - "15006"
+    - -u
+    - "1337"
+    - -m
+    - REDIRECT
+    - -i
+    - '*'
+    - -x
+    - ""
+    - -b
+    - '*'
+    - -d
+    - 15090,15020
+    image: docker.io/istio/proxyv2:1.5.0
+    imagePullPolicy: IfNotPresent
+    name: istio-init
+    resources:
+      limits:
+        cpu: 100m
+        memory: 50Mi
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        add:
+        - NET_ADMIN
+        - NET_RAW
+        drop:
+        - ALL
+      privileged: false
+      readOnlyRootFilesystem: false
+      runAsGroup: 0
+      runAsNonRoot: false
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: httpbin-token-ktmrn
+      readOnly: true
+  nodeName: 192.168.0.61
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1337
+  serviceAccount: httpbin
+  serviceAccountName: httpbin
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: httpbin-token-ktmrn
+    secret:
+      defaultMode: 420
+      secretName: httpbin-token-ktmrn
+  - emptyDir:
+      medium: Memory
+    name: istio-envoy
+  - downwardAPI:
+      defaultMode: 420
+      items:
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.labels
+        path: labels
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.annotations
+        path: annotations
+    name: podinfo
+  - configMap:
+      defaultMode: 420
+      name: istio-ca-root-cert
+    name: istiod-ca-cert
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2020-03-26T07:07:00Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2020-03-26T07:07:03Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2020-03-26T07:07:03Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2020-03-26T07:06:58Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://2838b1cb80928c79b1a78be9536e94e646a2eea6d5314b17ba17fc799eb99839
+    image: kennethreitz/httpbin:latest
+    imageID: docker-pullable://kennethreitz/httpbin@sha256:599fe5e5073102dbb0ee3dbb65f049dab44fa9fc251f6835c9990f8fb196a72b
+    lastState: {}
+    name: httpbin
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2020-03-26T07:07:00Z"
+  - containerID: docker://d04b13abea742660c2169e82ab9e4214f429338f0103c11e002ff164b7e381f6
+    image: istio/proxyv2:1.5.0
+    imageID: docker-pullable://istio/proxyv2@sha256:89b5fe2df96920189a193dd5f7dbd776e00024e4c1fd1b59bb53867278e9645a
+    lastState: {}
+    name: istio-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2020-03-26T07:07:01Z"
+  hostIP: 192.168.0.61
+  initContainerStatuses:
+  - containerID: docker://2c1f986d89bb141f998049b64a1ee8650ee708b2f05898906e80a4332b68a581
+    image: istio/proxyv2:1.5.0
+    imageID: docker-pullable://istio/proxyv2@sha256:89b5fe2df96920189a193dd5f7dbd776e00024e4c1fd1b59bb53867278e9645a
+    lastState: {}
+    name: istio-init
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: docker://2c1f986d89bb141f998049b64a1ee8650ee708b2f05898906e80a4332b68a581
+        exitCode: 0
+        finishedAt: "2020-03-26T07:07:00Z"
+        reason: Completed
+        startedAt: "2020-03-26T07:07:00Z"
+  phase: Running
+  podIP: 172.16.0.92
+  podIPs:
+  - ip: 172.16.0.92
+  qosClass: Burstable
+  startTime: "2020-03-26T07:06:58Z"
