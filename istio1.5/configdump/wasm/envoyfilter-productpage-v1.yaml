@@ -1,0 +1,39 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: EnvoyFilter
+metadata:
+  creationTimestamp: "2020-04-23T09:19:34Z"
+  generation: 1
+  name: productpage-v1-myfilter
+  namespace: default
+  resourceVersion: "9071122"
+  selfLink: /apis/networking.istio.io/v1alpha3/namespaces/default/envoyfilters/productpage-v1-myfilter
+  uid: b528b175-5e08-4b08-85ed-a324a2418a64
+spec:
+  configPatches:
+  - applyTo: HTTP_FILTER
+    match:
+      context: SIDECAR_INBOUND
+      listener:
+        filterChain:
+          filter:
+            name: envoy.http_connection_manager
+            subFilter:
+              name: envoy.router
+    patch:
+      operation: INSERT_BEFORE
+      value:
+        config:
+          config:
+            name: myfilter
+            rootId: add_header_root_id
+            vmConfig:
+              code:
+                local:
+                  filename: /var/local/lib/wasme-cache/72ad74e260c99fd77bbfd62f5dfab16af666dbdee8bacca39d97eafe60c69584
+              runtime: envoy.wasm.runtime.v8
+              vmId: myfilter
+        name: envoy.filters.http.wasm
+  workloadSelector:
+    labels:
+      app: productpage
+      version: v1
