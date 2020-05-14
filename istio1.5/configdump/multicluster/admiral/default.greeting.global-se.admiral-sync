@@ -1,0 +1,28 @@
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  creationTimestamp: 2020-05-14T02:42:46Z
+  generation: 1
+  labels:
+    identity: greeting
+  name: default.greeting.global-se
+  namespace: admiral-sync
+  resourceVersion: "181768"
+  selfLink: /apis/networking.istio.io/v1beta1/namespaces/admiral-sync/serviceentries/default.greeting.global-se
+  uid: 7e0ed8fc-cc49-4399-9246-85b80665c528
+spec:
+  addresses:
+  - 240.0.10.1
+  endpoints:
+  - address: greeting.sample.svc.cluster.local
+    locality: hkg
+    ports:
+      http: 80
+  hosts:
+  - default.greeting.global
+  location: MESH_INTERNAL
+  ports:
+  - name: http
+    number: 80
+    protocol: http
+  resolution: DNS
